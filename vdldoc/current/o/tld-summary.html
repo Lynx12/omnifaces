@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.org/vdldoc" xmlns:fo="http://www.w3.org/1999/XSL/Format">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>o (OmniFaces VDL Documentation - Generated Documentation)
@@ -185,6 +185,20 @@
 		</td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><b><a href="deferredScript.html">deferredScript</a></b></td><td class="colLast">
+			
+				<strong>DeferredScript</strong> is a component which defers the loading of the given script resource to the window
+				load event. In other words, the given script resource is only loaded when the window is really finished with loading.
+				So, the enduser can start working with the webpage without waiting for the additional scripts to be loaded. Usually,
+				it are those kind of scripts which are just for progressive enhancement and thus not essential for the functioning
+				of the webpage.
+				<p>
+				This will give bonus points with among others the Google PageSpeed tool, on the contrary to placing the script at
+				bottom of body, or using <code>defer="true"</code> or even <code>async="true"</code>.
+			
+		</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><b><a href="onloadScript.html">onloadScript</a></b></td><td class="colLast">
 			
 				<strong><code>o:onloadScript</code></strong> is an extension to <code>&lt;h:outputScript&gt;</code> which will be executed in the
@@ -200,7 +214,7 @@
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="highlight.html">highlight</a></b></td><td class="colLast">
 			
 				<strong><code>o:highlight</code></strong> is a helper component which highlights all invalid {@link UIInput} components and the
@@ -239,7 +253,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="conditionalComment.html">conditionalComment</a></b></td><td class="colLast">
 			
 				<p><strong>o:conditionalComment</strong> is an <code>UIComponent</code> which renders a conditional comment. Conditional
@@ -267,7 +281,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="validateAll.html">validateAll</a></b></td><td class="colLast">
 			
 				<strong><code>o:validateAll</code></strong> validates validates if ALL of the given <code>UIInput</code>
@@ -350,7 +364,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="validateAllOrNone.html">validateAllOrNone</a></b></td><td class="colLast">
 			
 				<strong><code>o:validateAllOrNone</code></strong> validates validates if at least ALL of the given <code>UIInput</code>
@@ -362,7 +376,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="validateOneOrMore.html">validateOneOrMore</a></b></td><td class="colLast">
 			
 				<strong><code>o:validateOneOrMore</code></strong> validates if at least ONE of the given <code>UIInput</code>
@@ -374,7 +388,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="validateOne.html">validateOne</a></b></td><td class="colLast">
 			
 				<strong><code>o:validateOne</code></strong> validates if ONLY ONE of the given <code>UIInput</code>
@@ -386,7 +400,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="validateOneOrNone.html">validateOneOrNone</a></b></td><td class="colLast">
 			
 				<strong><code>o:validateOneOrNone</code></strong> validates if ONLY ONE of the given <code>UIInput</code> components has been filled
@@ -398,7 +412,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="validateEqual.html">validateEqual</a></b></td><td class="colLast">
 			
 				<strong><code>o:validateEqual</code></strong> validates if ALL of the given <code>UIInput</code> components have the
@@ -410,7 +424,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="validateUnique.html">validateUnique</a></b></td><td class="colLast">
 			
 				<strong><code>o:validateUnique</code></strong> validates if ALL of the given <code>UIInput</code> components have an
@@ -422,7 +436,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="validateOrder.html">validateOrder</a></b></td><td class="colLast">
 			
 				<strong>ValidateOrder</strong> validates if the values of the given <code>UIInput</code> components as specified in
@@ -445,7 +459,7 @@ input.error, select.error, textarea.error {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="validateMultiple.html">validateMultiple</a></b></td><td class="colLast">
 			
 				<strong>ValidateMultiple</strong> allows the developer to validate multiple fields by a custom validator method:
@@ -482,7 +496,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="validator.html">validator</a></b></td><td class="colLast">
 			
 				The <code>&lt;o:validator&gt;</code> basically extends the <code>&lt;f:validator&gt;</code> tag family with the
@@ -503,7 +517,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="converter.html">converter</a></b></td><td class="colLast">
 			
 				The <code>&lt;o:converter&gt;</code> basically extends the <code>&lt;f:converter&gt;</code> tag family with the
@@ -520,7 +534,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="viewParam.html">viewParam</a></b></td><td class="colLast">
 				
 					<strong><code>o:viewParam</code></strong> is a component that extends the standard viewParam and provides a stateless
@@ -538,7 +552,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
 				
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="methodParam.html">methodParam</a></b></td><td class="colLast">
 			
 				<strong><code>o:methodParam</code></strong> is a tag handler that can be used to pass a method expression
@@ -580,7 +594,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="componentIdParam.html">componentIdParam</a></b></td><td class="colLast">
 				
 					<strong>ComponentIdParam</strong> is a component that allows component ids to be provided as request parameters
@@ -598,7 +612,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
 				
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="outputFormat.html">outputFormat</a></b></td><td class="colLast">
         	
 				<strong>OutputFormat</strong> is a component that extends the standard <code>HtmlOutputFormat</code> and provides support
@@ -607,7 +621,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
              
         </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="outputLabel.html">outputLabel</a></b></td><td class="colLast">
         	
 	        	<strong><code>o:outputLabel</code></strong> is a component that extends the standard outputLabel and provides extra support for
@@ -618,7 +632,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
              
         </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="form.html">form</a></b></td><td class="colLast">
         	
         		<strong>Form</strong> is a component that extends the standard <code>UIForm</code> and provides a way to keep view
@@ -628,7 +642,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
              
         </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="cache.html">cache</a></b></td><td class="colLast">
 	       	
 	       		<strong>Cache</strong> is a component that initially renders the output of its children into a buffer
@@ -711,7 +725,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="cacheValue.html">cacheValue</a></b></td><td class="colLast">
 			
 				Tag handler (runs at tree build-time) that makes a value expression available under the given name that caches its value.
@@ -729,7 +743,7 @@ public class ValidateValuesBean implements MultiFieldValidator {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="importConstants.html">importConstants</a></b></td><td class="colLast">
 			
 				<p>The <code>&lt;o:importConstants&gt;</code> allows the developer to have a mapping of all constant field values of
@@ -766,7 +780,7 @@ public enum Baz {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="importFunctions.html">importFunctions</a></b></td><td class="colLast">
 			
 				<p>The <code>&lt;o:importFunctions&gt;</code> allows the developer to have access to all functions of the given
@@ -798,7 +812,7 @@ public enum Baz {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="ignoreValidationFailed.html">ignoreValidationFailed</a></b></td><td class="colLast">
 			
 				The <code>&lt;o:ignoreValidationFailed&gt;</code> allows the developer to ignore validation failures when
@@ -810,7 +824,7 @@ public enum Baz {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="enableRestorableView.html">enableRestorableView</a></b></td><td class="colLast">
 			
 				The <code>&lt;o:enableRestorableView&gt;</code> instructs the view handler to recreate the entire view whenever the
@@ -823,7 +837,7 @@ public enum Baz {
 			
 		</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><b><a href="validateBean.html">validateBean</a></b></td><td class="colLast">
 			
 				The <code>&lt;o:validateBean&gt;</code> allows the developer to control bean validation groups on a
@@ -836,7 +850,7 @@ public enum Baz {
 			
 		</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><b><a href="validateUniqueColumn.html">validateUniqueColumn</a></b></td><td class="colLast">
 			
 				<strong>ValidateUniqueColumn</strong> validates if the given <code>UIInput</code> component in an <code>UIData</code> component
@@ -868,6 +882,16 @@ public enum Baz {
 				<pre>
 &lt;o:validateUniqueColumn message="Duplicate value!" /&gt;
 				</pre>
+			
+		</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><b><a href="massAttribute.html">massAttribute</a></b></td><td class="colLast">
+			
+				This handler sets an attribute of the given name and value on all nested components, if they don't already have an
+				attribute set. On boolean attributes like <code>disabled</code>, <code>readonly</code> and <code>rendered</code>,
+				any literal (static) attribute value will be ignored and overridden. Only if they have already a value expression as
+				attribute value, then it won't be overridden. This is a technical limitation as they don't default to <code>null</code>.
 			
 		</td>
 </tr>

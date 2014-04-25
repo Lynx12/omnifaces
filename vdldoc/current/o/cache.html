@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<html lang="en" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.org/vdldoc" xmlns:fo="http://www.w3.org/1999/XSL/Format">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>cache (OmniFaces VDL Documentation - Generated Documentation)
@@ -54,7 +54,8 @@
 <div class="header">
 <h1 title="Library" class="title">o</h1>
 <h2>
-							Tag cache</h2>
+									Tag
+									cache</h2>
 </div>
 <div class="contentContainer">
 <div class="description">
@@ -190,8 +191,8 @@
 </tr>
 </thead>
 <tbody>
-<tr class="rowColor">
-<td class="colFirst"><code>key</code></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<tr id="key" class="rowColor">
+<td class="colFirst"><a href="#key"><code>key</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
 <br>(<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
 				
@@ -206,8 +207,8 @@
 				 
             </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>scope</code></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<tr id="scope" class="altColor">
+<td class="colFirst"><a href="#scope"><code>scope</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
 <br>(<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
 				
@@ -222,8 +223,8 @@
 				 
             </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>time</code></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<tr id="time" class="rowColor">
+<td class="colFirst"><a href="#time"><code>time</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
 <br>(<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
 				
@@ -245,8 +246,8 @@
 				 
             </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>useBuffer</code></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<tr id="useBuffer" class="altColor">
+<td class="colFirst"><a href="#useBuffer"><code>useBuffer</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
 <br>(<i>must evaluate to </i><code>java.lang.Boolean</code>)
 					</td><td class="colLast">
 				
@@ -258,23 +259,22 @@
 					<p>
 					Via this switch, the full response is buffered if the cache doesn't contain content for this component and special
 					markers are inserted surrounding the children's rendering. Afterwards, the content between the markers (if any) is
-					extracted and inserted into the cache. Note that the full response is only buffered incase there's no value the cache.
+					extracted and inserted into the cache. Note that the full response is only buffered incase there's no value in the cache.
 					For all other requests this buffering will not happen.
 					<p>
 					Since this is clearly a more resource intensive and invasive method to grab content, it's not enabled by default.
 					In addition to setting this attribute to <code>true</code>, the <code>org.omnifaces.servlet.BufferedHttpServletResponse</code>
 					Servlet Filter needs to be configured to filter the Faces Servlet (or alternatively just the pages for which the buffering
 					method should be used).
-
 				 
             </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>reset</code></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<tr id="reset" class="rowColor">
+<td class="colFirst"><a href="#reset"><code>reset</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
 <br>(<i>must evaluate to </i><code>java.lang.Boolean</code>)
 					</td><td class="colLast">
 				
-					Resets the cache when set to to <code>true</code>. Default is <code>false</code>.
+					Resets the cache when set to <code>true</code>. Default is <code>false</code>.
 					<p>
 					This attribute can be used to reset the cache, meaning that the first time the cache component is rendered
 					again, it will re-render its children and will cause any cached value expressions (via <code>o:cacheValue</code>) to be
@@ -283,6 +283,22 @@
 					Note that this value has to remain true until the cache component is rendered, after that it should be set to false
 					again otherwise the cached content will be reset again at the next rendering.
 				 
+            </td>
+</tr>
+<tr id="disabled" class="altColor">
+<td class="colFirst"><a href="#disabled"><code>disabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<br>(<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                
+                    Disables the cache when set to <code>true</code>. Default is <code>false</code>.
+                    <p>
+                    This attribute can be used to disable the cache (temporarily). In disabled state the children will be rendered directly
+                    and cached content (if any) will not be used, nor will the rendering outcome of the children be cached.
+                    <p>
+                    When the attribute is set to <code>false</code> again any content that was cached before the cache was disabled will be
+                    shown again if said content is still available in the cache. The content that was rendered when the cache was disabled
+                    has no effect on any such previously cached content.
+                 
             </td>
 </tr>
 </tbody>

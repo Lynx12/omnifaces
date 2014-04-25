@@ -2,7 +2,7 @@
 <html lang="en" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:vdldoc="http://vdldoc.org/vdldoc" xmlns:fo="http://www.w3.org/1999/XSL/Format">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>validateAllOrNone (OmniFaces VDL Documentation - Generated Documentation)
+<title>deferredScript (OmniFaces VDL Documentation - Generated Documentation)
 			</title>
 <meta name="keywords" content="$title">
 <link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
@@ -32,12 +32,12 @@
 <div class="subNav">
 <ul class="navList">
 <li>
-<a target="_top" href="../index.html?o/validateAllOrNone.html">
+<a target="_top" href="../index.html?o/deferredScript.html">
 									Frames
 								</a>
 </li>
 <li>
-<a target="_top" href="validateAllOrNone.html">
+<a target="_top" href="deferredScript.html">
 									No Frames
 								</a>
 </li>
@@ -55,7 +55,7 @@
 <h1 title="Library" class="title">o</h1>
 <h2>
 									Tag
-									validateAllOrNone</h2>
+									deferredScript</h2>
 </div>
 <div class="contentContainer">
 <div class="description">
@@ -65,12 +65,14 @@
 <dt>Description:</dt>
 <dd>
 			
-				<strong><code>o:validateAllOrNone</code></strong> validates validates if at least ALL of the given <code>UIInput</code>
-				components have been filled out or that NONE of the given <code>UIInput</code> components have been
-				filled out. The default message is
-				<blockquote>{0}: Please fill out all or none of those fields</blockquote>
+				<strong>DeferredScript</strong> is a component which defers the loading of the given script resource to the window
+				load event. In other words, the given script resource is only loaded when the window is really finished with loading.
+				So, the enduser can start working with the webpage without waiting for the additional scripts to be loaded. Usually,
+				it are those kind of scripts which are just for progressive enhancement and thus not essential for the functioning
+				of the webpage.
 				<p>
-				For general usage instructions, refer <code>validateAll</code> tag documentation.
+				This will give bonus points with among others the Google PageSpeed tool, on the contrary to placing the script at
+				bottom of body, or using <code>defer="true"</code> or even <code>async="true"</code>.
 			
 		</dd>
 </dl>
@@ -91,7 +93,7 @@
 </thead>
 <tbody>
 <tr class="rowColor">
-<td class="colFirst">Component Type</td><td class="colLast"><code>org.omnifaces.component.validator.ValidateAllOrNone</code></td>
+<td class="colFirst">Component Type</td><td class="colLast"><code>org.omnifaces.component.script.DeferredScript</code></td>
 </tr>
 <tr class="altColor">
 <td class="colFirst">Handler Class</td><td class="colLast"><i>None</i></td>
@@ -149,52 +151,59 @@
 				
 			</td>
 </tr>
-<tr id="components" class="altColor">
-<td class="colFirst"><a href="#components"><code>components</code></a></td><td class="colOne"><code>true</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<tr id="library" class="altColor">
+<td class="colFirst"><a href="#library"><code>library</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
 <br>(<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
 				
-					The space separated collection of client IDs of UI input components to be validated.
+					The "library name" part of the resource identifier.
 				
 			</td>
 </tr>
-<tr id="invalidateAll" class="rowColor">
-<td class="colFirst"><a href="#invalidateAll"><code>invalidateAll</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-<br>(<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-				
-					Whether to invalidate <strong>all</strong> fields or only those which are empty.
-				
-			</td>
-</tr>
-<tr id="message" class="altColor">
-<td class="colFirst"><a href="#message"><code>message</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<tr id="name" class="rowColor">
+<td class="colFirst"><a href="#name"><code>name</code></a></td><td class="colOne"><code>true</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
 <br>(<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
 				
-					The validator message to be shown on failure. Any "{0}" placeholder in the message will be
-					substituted with a comma separated string of labels of the referenced input components.
+					The "resource name" part of the resource identifier.
 				
 			</td>
 </tr>
-<tr id="showMessageFor" class="rowColor">
-<td class="colFirst"><a href="#showMessageFor"><code>showMessageFor</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<tr id="group" class="altColor">
+<td class="colFirst"><a href="#group"><code>group</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
 <br>(<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
 				
-					The identifier for which this validator should show the message. Defaults to "@this" which is the
-					validator component itself. Other available values are "@all" which will show the message for all of
-					the referenced components and "@invalid" which will show the message for only the invalidated
-					components. Any other space separated value will be treated as client ID of UI input component.
+					The group name on which the deferred script resources should be combined by CombinedResourceHandler. 
+					All deferred scripts resources having the same combined group name will be combined into a single 
+					deferred script in the place where the first member of the group occurs in the component tree.
 				
 			</td>
 </tr>
-<tr id="disabled" class="altColor">
-<td class="colFirst"><a href="#disabled"><code>disabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-<br>(<i>must evaluate to </i><code>java.lang.Boolean</code>)
+<tr id="onbegin" class="rowColor">
+<td class="colFirst"><a href="#onbegin"><code>onbegin</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<br>(<i>must evaluate to </i><code>java.lang.String</code>)
 					</td><td class="colLast">
 				
-					Whether the validation should be disabled or not. Defaults to <code>false</code>.
+					JavaScript code to execute right before the script loading begins.
+				
+			</td>
+</tr>
+<tr id="onsuccess" class="altColor">
+<td class="colFirst"><a href="#onsuccess"><code>onsuccess</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<br>(<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+				
+					JavaScript code to execute when the script loading is successfully completed.
+				
+			</td>
+</tr>
+<tr id="onerror" class="rowColor">
+<td class="colFirst"><a href="#onerror"><code>onerror</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+<br>(<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+				
+					JavaScript code to execute when the script loading has failed.
 				
 			</td>
 </tr>
@@ -222,12 +231,12 @@
 <div class="subNav">
 <ul class="navList">
 <li>
-<a target="_bottom" href="../index.html?o/validateAllOrNone.html">
+<a target="_bottom" href="../index.html?o/deferredScript.html">
 									Frames
 								</a>
 </li>
 <li>
-<a target="_bottom" href="validateAllOrNone.html">
+<a target="_bottom" href="deferredScript.html">
 									No Frames
 								</a>
 </li>
